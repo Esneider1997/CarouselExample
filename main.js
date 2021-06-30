@@ -1,4 +1,21 @@
-function App() {}
+const buttonPrev  = document.getElementById('button-prev');
+const buttonNext  = document.getElementById('button-next');
+const track  = document.getElementById('track'); /* Contenedor Imagenes */
+const slicklist  = document.getElementById('slick-list'); /* Contenedor de todo el Carousel */
+
+const slick = document.querySelectorAll('.slick') /* Clase de las 15 imagenes */
+
+
+
+
+
+
+
+
+
+
+
+/* function App() {}
 
 window.onload = function (event) {
     var app = new App();
@@ -32,4 +49,5 @@ let nextAction = (leftPosition,trackWidth,listWidth,slickWidth,track) => {
     if(leftPosition < (trackWidth - listWidth)) {
         track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
     }
-}
+} */
+
