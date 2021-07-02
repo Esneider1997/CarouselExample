@@ -1,0 +1,122 @@
+body{
+    margin: 0; 
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(226, 226, 226, 1) 110%);
+}
+
+h4, h2, small, a{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.Carousel{
+    width: 100%;
+    margin: 0px 60px;
+}
+
+.Carousel h2{
+    font-size: 16px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    text-transform:uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+/* Image */
+
+.slick-list{
+    position: relative;
+    display: flex; /* Los coloca del mismo tamaño los botones y el div donde van las imagenes */
+    align-items: center; /* Centra los botones de lado izquierdo y derecho en el centro y le quita el tamaño aparte los coloca de tu tamaño y deja igual las imagenes  */
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw; /* "vw" Ancho del viewport, "vh" Alto del viewport */
+    overflow: hidden; /* OCULTA LAS IMAGENES SOBRESALIDAS */
+} 
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex; /* Al lado de la otra */
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 ;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+
+.slick a img{
+    object-fit: cover; /* https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit */
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, .5);
+    transition: .3s ease-in-out; /* Trabaja con el "hover" que esta adebajo para tardar la transiccion */
+}
+
+.slick a img:hover{
+    opacity: 0.85;
+}
+
+/* Button */
+
+.slick-arrow{
+    border-radius: 80px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba( 0, 0, 0, .15);
+    border: 0;
+    cursor: pointer;
+}
+
+.slick-arrow:focus{ /* <-- Cuando uno da click */
+    outline: 1px; /* como el border solid  outline-style, outline-width y outline-color /* color | style | width */
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba( 0, 0, 0, .17);
+}
+
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
